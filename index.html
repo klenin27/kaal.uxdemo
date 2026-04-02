@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kaal Store</title>
+
+    <!-- Google Analytics will go here -->
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .product {
+            background-color: #1e1e1e;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            max-width: 400px;
+        }
+
+        .images {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .images img {
+            width: 48%;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #ff4d4d;
+            border: none;
+            padding: 10px 15px;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff1a1a;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Kaal Clothing</h1>
+
+    <div class="product">
+        <div class="images">
+            <img src="blue-jorts-1.jpg.png" alt="Blue Jorts ">
+        </div>
+        <h2>Blue Jorts</h2>
+        <p>Price: ₹999</p>
+        <button onclick="buyNow()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <div class="images">
+            <img src="tiger-sweatshirt-1.jpg.png" alt="Tiger Sweatshirt ">
+        </div>
+        <h2>Tiger Sweatshirt</h2>
+        <p>Price: ₹1499</p>
+        <button onclick="buyNow()">Buy Now</button>
+    </div>
+
+    <script>
+        function buyNow() {
+            alert("Product Added!");
+
+            // Event tracking
+            gtag('event', 'buy_click', {
+                'event_category': 'ecommerce',
+                'event_label': 'buy button'
+            });
+        }
+    </script>
+
+</body>
+</html>
